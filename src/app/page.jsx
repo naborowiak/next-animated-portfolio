@@ -2,51 +2,46 @@ const Homepage = () => {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-4">
-        <div className="flex gap-4">
-          <a href="#" className="bg-black text-white px-4 py-2 rounded">Home</a>
-          <a href="#about" className="px-4 py-2">About</a>
-          <a href="#portfolio" className="px-4 py-2">Portfolio</a>
-          <a href="#contact" className="px-4 py-2">Contact</a>
+      <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto">
+        <div className="flex gap-6">
+          <a href="#" className="nav-link active">Home</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#portfolio" className="nav-link">Portfolio</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </div>
         <div className="flex items-center">
-          <span className="bg-black text-white px-4 py-2 rounded">Neal.dev</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">Neal.dev</span>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           <a href="https://github.com/naborowiak" target="_blank" rel="noopener noreferrer">
-            <img src="/github.svg" alt="GitHub" className="w-6 h-6" />
+            <img src="/github.svg" alt="GitHub" className="social-icon" />
           </a>
           <a href="https://www.linkedin.com/in/neal-borowiak/" target="_blank" rel="noopener noreferrer">
-            <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
+            <img src="/linkedin.svg" alt="LinkedIn" className="social-icon" />
           </a>
           <a href="https://x.com/NealWitIt" target="_blank" rel="noopener noreferrer">
-            <img src="/twitter.svg" alt="Twitter" className="w-6 h-6" />
+            <img src="/twitter.svg" alt="Twitter" className="social-icon" />
           </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="flex items-center justify-between px-20 py-16">
-        <div className="w-1/2">
-          {/* You can add your own artistic image here */}
-          <img src="/profile-art.png" alt="Artistic Portrait" className="w-full" />
+      <section className="flex items-center justify-between px-20 py-16 max-w-7xl mx-auto">
+        <div className="w-1/2 pr-12">
+          <img src="/profile-art.png" alt="Artistic Portrait" className="w-full rounded-2xl shadow-2xl" />
         </div>
-        <div className="w-1/2 space-y-6">
-          <h1 className="text-6xl font-bold leading-tight">
+        <div className="w-1/2 space-y-8">
+          <h1 className="text-6xl font-bold leading-tight bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">
             Crafting Digital Experiences, Designing Tomorrow.
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 leading-relaxed">
             Welcome to my digital canvas, where innovation and creativity converge. With a
             keen eye for ServiceNow architecture and a mastery of development, my portfolio
             showcases a diverse collection of projects that reflect my commitment to excellence.
           </p>
-          <div className="flex gap-4">
-            <button className="bg-black text-white px-6 py-3 rounded">
-              View My Work
-            </button>
-            <button className="border border-black px-6 py-3 rounded">
-              Contact Me
-            </button>
+          <div className="flex gap-6">
+            <button className="button-primary">View My Work</button>
+            <button className="button-secondary">Contact Me</button>
           </div>
         </div>
       </section>
@@ -62,31 +57,31 @@ const Homepage = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Skills & Expertise</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="p-4 bg-white shadow rounded">
-              <h3 className="font-bold mb-2">ServiceNow</h3>
-              <p>Development & Architecture</p>
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title text-center">Skills & Expertise</h2>
+          <div className="grid grid-cols-3 gap-8">
+            <div className="card">
+              <h3 className="text-xl font-bold mb-4 text-purple-600">ServiceNow</h3>
+              <p className="text-gray-600">Development & Architecture</p>
             </div>
-            <div className="p-4 bg-white shadow rounded">
-              <h3 className="font-bold mb-2">Development</h3>
-              <p>JavaScript, GlideScript, HTML, CSS, AngularJS</p>
+            <div className="card">
+              <h3 className="text-xl font-bold mb-4 text-purple-600">Development</h3>
+              <p className="text-gray-600">JavaScript, GlideScript, HTML, CSS, AngularJS</p>
             </div>
-            <div className="p-4 bg-white shadow rounded">
-              <h3 className="font-bold mb-2">Microsoft Power Platform</h3>
-              <p>PowerAutomate, PowerBI, PowerApps, Dynamics</p>
+            <div className="card">
+              <h3 className="text-xl font-bold mb-4 text-purple-600">Microsoft Power Platform</h3>
+              <p className="text-gray-600">PowerAutomate, PowerBI, PowerApps, Dynamics</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Projects</h2>
-          <div className="text-center text-xl text-gray-600">
+      <section className="py-20 px-6 bg-white/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="section-title text-center">Projects</h2>
+          <div className="text-center text-xl text-gray-600 p-12 bg-white/80 rounded-2xl shadow-lg">
             Coming Soon
           </div>
         </div>
