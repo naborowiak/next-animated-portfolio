@@ -2,6 +2,7 @@
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import CustomCursor from '../ui/CustomCursor';
+import ThemeToggle from '../ui/ThemeToggle';
 import '../../styles/global.css';
 
 interface Props {
@@ -24,6 +25,7 @@ const { title, description } = Astro.props;
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 min-h-screen">
     <CustomCursor client:load />
+    <ThemeToggle client:load />
     <Header />
     <main class="pt-20">
       <slot />

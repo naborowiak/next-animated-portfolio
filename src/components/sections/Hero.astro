@@ -1,3 +1,5 @@
+import ThreeScene from '../ui/ThreeScene';
+
 <section class="pt-32 pb-20 px-6">
   <div class="max-w-7xl mx-auto">
     <div class="flex flex-col lg:flex-row items-center gap-12">
@@ -20,8 +22,12 @@
         </div>
       </div>
       <div class="lg:w-1/2">
-        <!-- Add your hero image or 3D element here -->
-        <div class="aspect-square bg-gradient-to-br from-primary-500/20 to-blue-500/20 rounded-2xl"></div>
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-blue-500/20 rounded-2xl blur-lg"></div>
+          <div class="relative">
+            <ThreeScene client:load />
+          </div>
+        </div>
       </div>
     </div>
   </div>
