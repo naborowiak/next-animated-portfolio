@@ -1,0 +1,33 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import CustomCursor from '../ui/CustomCursor';
+import '../../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 min-h-screen">
+    <CustomCursor client:load />
+    <Header />
+    <main class="pt-20">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html> 
