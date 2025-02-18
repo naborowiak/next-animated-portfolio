@@ -1,13 +1,53 @@
 const Homepage = () => {
   return (
     <div className="min-h-screen">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-4">
+        <div className="flex gap-4">
+          <a href="#" className="bg-black text-white px-4 py-2 rounded">Home</a>
+          <a href="#about" className="px-4 py-2">About</a>
+          <a href="#portfolio" className="px-4 py-2">Portfolio</a>
+          <a href="#contact" className="px-4 py-2">Contact</a>
+        </div>
+        <div className="flex items-center">
+          <span className="bg-black text-white px-4 py-2 rounded">Neal.dev</span>
+        </div>
+        <div className="flex gap-4">
+          <a href="https://github.com/naborowiak" target="_blank" rel="noopener noreferrer">
+            <img src="/github.svg" alt="GitHub" className="w-6 h-6" />
+          </a>
+          <a href="https://www.linkedin.com/in/neal-borowiak/" target="_blank" rel="noopener noreferrer">
+            <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
+          </a>
+          <a href="https://x.com/NealWitIt" target="_blank" rel="noopener noreferrer">
+            <img src="/twitter.svg" alt="Twitter" className="w-6 h-6" />
+          </a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="py-20 px-4 text-center">
-        <h1 className="text-6xl font-bold mb-4">Neal Borowiak</h1>
-        <h2 className="text-2xl text-gray-600 mb-8">ServiceNow Architect / Sr. ServiceNow Developer</h2>
-        <div className="flex justify-center gap-4 mb-8">
-          <a href="https://www.linkedin.com/in/neal-borowiak/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">LinkedIn</a>
-          <a href="https://x.com/NealWitIt" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Twitter</a>
+      <section className="flex items-center justify-between px-20 py-16">
+        <div className="w-1/2">
+          {/* You can add your own artistic image here */}
+          <img src="/profile-art.png" alt="Artistic Portrait" className="w-full" />
+        </div>
+        <div className="w-1/2 space-y-6">
+          <h1 className="text-6xl font-bold leading-tight">
+            Crafting Digital Experiences, Designing Tomorrow.
+          </h1>
+          <p className="text-xl text-gray-600">
+            Welcome to my digital canvas, where innovation and creativity converge. With a
+            keen eye for ServiceNow architecture and a mastery of development, my portfolio
+            showcases a diverse collection of projects that reflect my commitment to excellence.
+          </p>
+          <div className="flex gap-4">
+            <button className="bg-black text-white px-6 py-3 rounded">
+              View My Work
+            </button>
+            <button className="border border-black px-6 py-3 rounded">
+              Contact Me
+            </button>
+          </div>
         </div>
       </section>
 
