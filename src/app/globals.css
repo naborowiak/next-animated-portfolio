@@ -2,40 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --gradient-start: #f3e7ff;
-  --gradient-end: #e5f0ff;
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen;
+  }
 }
 
-body {
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-  min-height: 100vh;
-}
+@layer components {
+  .nav-link {
+    @apply px-4 py-2 text-gray-700 hover:text-purple-600 transition-colors duration-300 relative;
+  }
 
-.nav-link {
-  @apply px-4 py-2 text-gray-700 hover:text-purple-600 transition-colors;
-}
+  .nav-link.active {
+    @apply bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg;
+  }
 
-.nav-link.active {
-  @apply bg-black text-white rounded;
-}
+  .nav-link.active:hover {
+    @apply text-white;
+  }
 
-.social-icon {
-  @apply w-6 h-6 text-gray-600 hover:text-purple-600 transition-colors;
-}
+  .social-icon {
+    @apply w-6 h-6 opacity-60 hover:opacity-100 transition-opacity duration-300;
+  }
 
-.button-primary {
-  @apply bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all;
-}
+  .button-primary {
+    @apply bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-3 rounded-lg 
+    hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
 
-.button-secondary {
-  @apply border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-all;
-}
+  .button-secondary {
+    @apply border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg
+    hover:bg-purple-600 hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
 
-.section-title {
-  @apply text-4xl font-bold mb-8 text-gray-800;
-}
+  .section-title {
+    @apply text-4xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-blue-500 
+    text-transparent bg-clip-text;
+  }
 
-.card {
-  @apply p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow;
+  .card {
+    @apply p-8 bg-white/80 rounded-xl shadow-lg backdrop-blur-sm;
+  }
 }
